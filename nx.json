@@ -1,4 +1,20 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudId": "68496c1bd6342c28b0e00480"
+  "nxCloudId": "68496c1bd6342c28b0e00480",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "tsc:typecheck"
+        },
+        "build": {
+          "targetName": "tsc:build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "tsc:build-deps",
+          "watchDepsName": "tsc:watch-deps"
+        }
+      }
+    }
+  ]
 }
